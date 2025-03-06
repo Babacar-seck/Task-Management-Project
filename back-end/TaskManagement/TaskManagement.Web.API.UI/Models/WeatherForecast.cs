@@ -1,4 +1,4 @@
-namespace TaskManagement.Web.API.UI
+namespace TaskManagement.Web.API.UI.Models
 {
     public class WeatherForecast
     {

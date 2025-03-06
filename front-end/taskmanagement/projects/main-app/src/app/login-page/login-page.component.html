@@ -1,0 +1,16 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <form #emailForm="ngForm" (ngSubmit)="onSubmit(emailForm)">
+      <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" [(ngModel)]="username" required>
+      </div>
+      <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" [(ngModel)]="password" required>
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+      <a href="#" class="forgot-password">Forgot Password?</a>
+  </form>
+</div>
+

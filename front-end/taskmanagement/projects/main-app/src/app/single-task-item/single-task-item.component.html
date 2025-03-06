@@ -1,0 +1,9 @@
+<div class="task-item-card">
+  <h2>Task Name: {{ myTaskItem.Name }}</h2>
+  <button><a routerLink="/taskItems">Back</a></button>
+  <p>Task Created: {{ myTaskItem.dueDate | date : 'd MMMM yyyy, HH:mm'}}</p>
+  <p>{{ myTaskItem.description }}</p>
+  <p>Completed: {{ myTaskItem.isCompleted ? 'Yes' : 'No' }}</p>
+  <p>User ID: {{ myTaskItem.userId }}</p>
+</div>
+  

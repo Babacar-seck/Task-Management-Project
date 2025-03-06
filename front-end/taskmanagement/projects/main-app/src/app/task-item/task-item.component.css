@@ -1,0 +1,23 @@
+
+
+.task-item-card {
+  width: 32%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  
+}
+
+.task-item-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+  
+.task-item-card p {
+  margin: 5px 0;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #333;
+}
