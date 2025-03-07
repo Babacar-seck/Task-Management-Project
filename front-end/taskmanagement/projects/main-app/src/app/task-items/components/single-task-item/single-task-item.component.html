@@ -1,0 +1,11 @@
+<div class="task-item-card" *ngIf="taskItem$ | async as taskItem">
+  <h2>Task Name: {{ taskItem.title }}</h2>
+  <button><a routerLink="/taskItems">Back</a></button>
+  <p>Task Created: {{ taskItem.dueDate | date : 'd MMMM yyyy, HH:mm'}}</p>
+  <p>{{ taskItem.description }}</p>
+  <p>Completed: {{ taskItem.isCompleted ? 'Yes' : 'No' }}</p>
+
+  <button (click)="editTask(taskItem)">Edit Task</button>
+</div>
+  
+

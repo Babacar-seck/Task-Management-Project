@@ -1,0 +1,21 @@
+<div class="form" >
+  <h2>Edit Task</h2>
+  <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <label for="title">Task Name:</label>
+    <input id="title" formControlName="title" required />
+
+    <label for="description">Description:</label>
+    <input id="description" formControlName="description" required />
+
+    <label for="dueDate">Due Date:</label>
+    <input id="dueDate" type="date" formControlName="dueDate" required />
+
+    <label for="isCompleted">Completed:</label>
+    <input id="isCompleted" type="checkbox" formControlName="isCompleted" />
+
+    <button type="submit" [disabled]="taskForm.invalid">Save Changes</button>
+    <button type="button" (click)="cancelEdit()">Cancel</button>
+  </form>
+</div>
+
+

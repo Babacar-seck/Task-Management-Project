@@ -1,0 +1,62 @@
+/* Style for the task item card */
+.task-item-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.task-item-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.task-item-card h2 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.task-item-card button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.task-item-card button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.task-item-card button:active {
+  transform: translateY(2px); /* Button presses down */
+}
+
+.task-item-card button:nth-child(2) {
+  background-color: #e74c3c; /* Red color for delete button */
+}
+
+.task-item-card button:nth-child(2):hover {
+  background-color: #c0392b; /* Darker red for hover */
+}
+
+.task-item-card button:nth-child(2):active {
+  transform: translateY(2px); /* Delete button presses down */
+}
+
+.task-item-card button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}

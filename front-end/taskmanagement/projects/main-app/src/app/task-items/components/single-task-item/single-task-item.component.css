@@ -1,0 +1,46 @@
+/* Style pour la carte de tâche */
+.task-item-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.task-item-card:hover {
+  transform: scale(1.05);
+}
+
+.task-item-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.task-item-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.task-item-card button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.task-item-card button:hover {
+  background-color: #2980b9;
+}
+
+.task-item-card a {
+  text-decoration: none;
+  color: white;
+}

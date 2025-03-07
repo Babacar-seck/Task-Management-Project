@@ -5,14 +5,20 @@ namespace TaskManagement.Web.API.UI.Models
 {
     public class User
     {
-        public int Id { get; set; }
+        [Key]
+        public int? Id { get; set; }
         [Required]
         public string Name { get; set; }
-        [Required, EmailAddress]
+
+        [Required, EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string Email { get; set; }
-        [JsonIgnore]
+        [Required]
         public string PasswordHash { get; set; }
         public DateTime RegistrationDate { get; set; } = DateTime.UtcNow;
-        public ICollection<TaskItem> Tasks { get; set; } 
+
+        public string? RefreshToken { get; set; } 
+        public DateTime? RefreshTokenExpiryTime { get; set; }
+
+        public ICollection<TaskItem>? Tasks { get; set; } 
     }
 }

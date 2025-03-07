@@ -1,0 +1,38 @@
+<div class="form-container">
+  <h2>Create a new Task Item</h2>
+  
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" formControlName="title">
+      <span class="error" *ngIf="userForm.get('title')?.invalid && userForm.get('title')?.touched">
+        Title is required
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" id="description" formControlName="description">
+      <span class="error" *ngIf="userForm.get('description')?.invalid && userForm.get('description')?.touched">
+        Description is required
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="dueDate">Due Date</label>
+      <input type="date" id="dueDate" formControlName="dueDate">
+      <span class="error" *ngIf="userForm.get('dueDate')?.invalid && userForm.get('dueDate')?.touched">
+        Due date is required
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="isCompleted">Task Completed</label>
+      <input type="checkbox" id="isCompleted" formControlName="isCompleted">
+    </div>
+
+    <button type="submit" [disabled]="userForm.invalid">Create</button>
+  </form>
+</div>
+
+

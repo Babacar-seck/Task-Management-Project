@@ -1,0 +1,14 @@
+<div class="task-container">
+  <ng-container *ngIf="taskItems$ | async as items; else loading">
+    <ng-container *ngIf="items.length > 0; else noTasks">
+      <app-task-item style="padding: 10px;" *ngFor="let item of items" [taskItem]="item"></app-task-item>
+    </ng-container>
+  </ng-container>
+  <ng-template #loading>
+    <div>Loading...</div>
+  </ng-template>
+
+  <ng-template #noTasks>
+    <div>No tasks available. Please add some tasks.</div>
+  </ng-template>
+</div>
