@@ -46,7 +46,39 @@ builder.Services.AddCors(options => { options.AddPolicy("AllowAngularApp", polic
 The application uses session management with a timeout of 1 hour. You can update the session settings in `Program.cs` if needed.
 builder.Services.AddSession(options => { options.Cookie.Name = ".TeamManagement.Session"; options.IdleTimeout = TimeSpan.FromSeconds(10); options.Cookie.IsEssential = true; });
 
-# For the backend Project 
+# For the FrontEnd Project 
+
+# Task Management Project
+
+This is a Task Management application built with Angular.
+
+## Prerequisites
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- Angular CLI (v12 or higher)
+
+## Installation
+1. Install the dependencies:
+
+    ```sh
+    npm install
+    ```
+
+## Running the Application
+
+1. Start the development server:
+
+    ```sh
+    ng serve
+    ```
+2. Open your browser and navigate to `http://localhost:4200`.
+
+
+## API
+
+The application communicates with a backend API. Make sure the backend server is running at `http://localhost:5036`.
+
 
 
     
